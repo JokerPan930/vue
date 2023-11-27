@@ -1,5 +1,25 @@
 <template>
+    
     <div>
+        <el-menu router style="border: none;" :default-active="$route.path">
+          <!-- index路径对应router中的path -->
+          <!-- default-active使el-menu-item标签中对应index 的高亮  -->
+          <el-menu-item index="/">
+            <template slot="title">
+              <i class="el-icon-house"></i>
+              <span>系统首页</span>
+            </template>
+          </el-menu-item>
+          <el-menu-item index="/element">Element</el-menu-item>
+          
+          <el-submenu>
+            <template slot="title">
+              <i class="el-icon-menu"></i>
+              <span>信息管理</span>
+            </template>
+            <el-menu-item>用户信息</el-menu-item>
+          </el-submenu>
+        </el-menu>
         <!-- <el-row>
             <el-col :span="6">
                 <div style="height: 300px; width: 100%; background-color: skyblue;"></div>
